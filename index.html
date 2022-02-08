@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple to-do list with localstorage." />
+    <title>Todo list pure javascript</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">To-Do List</h1>
+      <p class="header__description">
+        Made with love by
+        <a href="https://github.com/RafaelSavoy" class="link">Rafael Savoy</a>
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="container__section additem">
+        <h1 class="additem__title">Add item</h1>
+
+        <form class="additem__form" id="additem__form">
+          <input
+            type="text"
+            class="additem__input"
+            id="input--title"
+            placeholder="Title"
+            maxlength="30"
+            required
+            autocomplete="off"
+          />
+
+          <input
+            type="submit"
+            class="additem__button"
+            value="Add to list"
+            id="additem__button"
+          />
+        </form>
+      </section>
+
+      <section class="container__section listItems">
+        <h1 class="listItems__title">List</h1>
+        <ul class="listItems__list" id="listItems__list"></ul>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
