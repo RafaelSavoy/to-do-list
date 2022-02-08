@@ -1,10 +1,12 @@
 function setClasses() { // This function is used to update all classes in List Items 
   let items = document.querySelectorAll(".listItems__item");
   items.forEach((e, i) => {
-    if (e.classList[1] == undefined) {
+    let currentItemId = e.classList[1]
+    let newItemId = i
+    if (currentItemId == undefined) {
       e.classList.add(i);
     } else {
-      e.classList.replace(e.classList[1], i);
+      e.classList.replace(currentItemId, newItemId);
     }
   });
 }
@@ -42,11 +44,10 @@ function addToPage(title) { // This function is used to add list items to page
   const p = document.createElement("p");
   const a = document.createElement("a");
   const i = document.createElement("i");
-  i.classList.add("glyphicon");
-  i.classList.add("glyphicon-remove");
-  i.classList.add("color-red");
-
+  
+  i.classList.add("glyphicon","glyphicon-remove","color-red");
   a.appendChild(i);
+  
   a.addEventListener("click", function () {
     let currentItem = li.classList[1];
     this.parentNode.remove();
@@ -57,9 +58,10 @@ function addToPage(title) { // This function is used to add list items to page
   });
 
   li.classList.add("listItems__item");
-
+  
   p.classList.add("listItems__item__title");
   p.innerHTML = title;
+  
   li.appendChild(p);
   li.appendChild(a);
   ul.appendChild(li);
