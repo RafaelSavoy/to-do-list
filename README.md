@@ -1,6 +1,6 @@
 # To-Do List
 
-![alt text](download.png)
+![alt text](images/download.png)
 
 ## How to use
 
